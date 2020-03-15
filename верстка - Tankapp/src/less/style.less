@@ -1,0 +1,600 @@
+/*Font settings*/
+@font-face {
+    font-family: 'Ubuntu-reg';
+    src: url('../fonts/Ubuntu-Regular.eot');
+    src: url('../fonts/Ubuntu-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Ubuntu-Regular.woff2') format('woff2'),
+        url('../fonts/Ubuntu-Regular.woff') format('woff'),
+        url('../fonts/Ubuntu-Regular.ttf') format('truetype'),
+        url('../fonts/Ubuntu-Regular.svg#Ubuntu-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ubuntu-bold';
+    src: url('../fonts/Ubuntu-Bold.eot');
+    src: url('../fonts/Ubuntu-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Ubuntu-Bold.woff2') format('woff2'),
+        url('../fonts/Ubuntu-Bold.woff') format('woff'),
+        url('../fonts/Ubuntu-Bold.ttf') format('truetype'),
+        url('../fonts/Ubuntu-Bold.svg#Ubuntu-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ubuntu-light-italic';
+    src: url('../fonts/Ubuntu-LightItalic.eot');
+    src: url('../fonts/Ubuntu-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Ubuntu-LightItalic.woff2') format('woff2'),
+        url('../fonts/Ubuntu-LightItalic.woff') format('woff'),
+        url('../fonts/Ubuntu-LightItalic.ttf') format('truetype'),
+        url('../fonts/Ubuntu-LightItalic.svg#Ubuntu-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Ubuntu-medium';
+    src: url('../fonts/Ubuntu-Medium.eot');
+    src: url('../fonts/Ubuntu-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Ubuntu-Medium.woff2') format('woff2'),
+        url('../fonts/Ubuntu-Medium.woff') format('woff'),
+        url('../fonts/Ubuntu-Medium.ttf') format('truetype'),
+        url('../fonts/Ubuntu-Medium.svg#Ubuntu-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ubuntu-light';
+    src: url('../fonts/Ubuntu-Light.eot');
+    src: url('../fonts/Ubuntu-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Ubuntu-Light.woff2') format('woff2'),
+        url('../fonts/Ubuntu-Light.woff') format('woff'),
+        url('../fonts/Ubuntu-Light.ttf') format('truetype'),
+        url('../fonts/Ubuntu-Light.svg#Ubuntu-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open-Sans-regular';
+    src: url('../fonts/OpenSans-Regular.eot');
+    src: url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+        url('../fonts/OpenSans-Regular.woff') format('woff'),
+        url('../fonts/OpenSans-Regular.ttf') format('truetype'),
+        url('../fonts/OpenSans-Regular.svg#OpenSans-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.u-reg() {
+    font-family: 'Ubuntu-reg';
+}
+
+.u-bold() {
+    font-family: 'Ubuntu-bold';
+}
+
+.u-light() {
+    font-family: 'Ubuntu-light';
+}
+
+.u-light-italic() {
+    font-family: 'Ubuntu-light-italic';
+}
+
+.u-medium() {
+    font-family: 'Ubuntu-medium';
+}
+.o-regular() {
+    font-family: 'Open-Sans-regular';
+}
+.header-section-style() {
+    .u-medium();
+    font-size: 4rem;
+    text-transform: uppercase;
+    @media (max-width: 575px) {
+        font-size: 3rem;
+    }
+}
+.paragraph-header(@headers-section-color) {
+    .u-medium();
+    font-size: 2.2rem;
+    color: @headers-section-color;
+}
+.paragraph-text() {
+    margin: 1.5rem 0 3rem 2.2rem;
+    padding-right: 2rem;
+    .o-regular();
+    font-size: 1.4rem;
+    text-align: left;
+}
+.action-dot() {
+    .u-bold();
+    color: #ffffff;
+    background: #64a4d7; 
+    outline: none;
+    opacity: 0.75;
+}
+.footer-link-margin() {
+    margin: 0.47% 0;
+}
+/*Colors*/
+@btn-color: #77c344;
+@text-color: #91959c;
+@header-color: #5a626e;
+@header-text-color:#f7f6f2;
+@headers-section-color: #2d394c;
+@headers-e-mail-color: #5a626e;
+@nav-text-color-hover: #868b94;
+@nav-text-color: #2d394c;
+@footer-text-color: #4d5664;
+@footer-text-color-hover: #8a8f96;
+@bg-light-color: #ffffff;
+@bg-header-color: #f8f8f8;
+@bg-section-color: #f6f6f7;
+@bg-footer-color: #f9f9f9;
+/*media templates*/
+@mobile: ~"(max-width: 991px)";
+/*Basic settings*/
+html {
+    font-size: 10px;
+    @media (max-width: 767px) {
+        font-size: 8px;
+    }
+    @media (max-width: 476px) {
+        font-size: 5px;
+    }
+}
+/*Main section*/
+.main-css {
+    background: @bg-light-color url(../img/bg-first-screen.png) center center;
+    background-attachment: fixed;
+    /*Navigation*/
+    .navbar-css {
+        background-color: @bg-light-color;
+        .navbar-brand{
+            margin: 2.7% 0;
+            @media @mobile {
+                width: 100%;
+            }
+            img {
+                @media @mobile {
+                    display:block;
+                    margin: 0 auto;
+                } 
+            }
+        }
+        .navbar-toggler {
+            border: none;
+            outline: none;
+            .menu-toggler-css {
+                .u-medium();
+                color: @headers-section-color;
+                font-size: 2rem;
+            }
+            &-icon {
+                background-size: 120%;
+                background-position: bottom;
+            }
+            @media @mobile {
+                display:block;
+                margin: 0 auto;
+            }
+        }
+        .navbar-nav-css {
+            li {   
+                margin: 8% 0;
+                margin-right: 3.4rem;
+                a {
+                    .u-reg();
+                    color: @nav-text-color;
+                    text-decoration: none;
+                    font-size: 1.6rem;
+                    text-transform: uppercase;    
+                    &:hover {
+                        color: @nav-text-color-hover;
+                    }
+                }
+                &:last-child {
+                    margin-right: 0;
+                    @media @mobile {
+                        margin: 2% auto;
+                    }
+                }
+                @media @mobile {
+                    display:block;
+                    margin: 2% auto;
+                }
+            }
+        }
+    }
+    /*Header section*/
+    .header-css{
+        background: url(../img/Clouds.png) no-repeat;
+        background-size: contain;
+        background-position-y: 80%;
+        
+        @media @mobile {
+            background: none;
+        }
+        .main-form-css {
+            padding: 22% 0 0% 2.63%;
+            color: @header-text-color;
+            .main-header-css {
+                .u-bold();
+                font-size: 5.2rem;
+                text-transform: uppercase;
+                .second-row-css {
+                    display: block;
+                    margin-top: 0.16%;
+                }
+            }
+            .subtitle-css {
+                .u-light-italic();
+                font-size: 2.4rem;
+                margin-top: 5.5%;
+            }
+
+            .form-header-css {
+                .u-bold();
+                label {
+                    display: block;
+                    margin: 9.50% 0 4.75% 0;
+                    font-size: 1.6rem;
+                    span{
+                        text-transform: uppercase;
+                        background: #ffce54;
+                        padding: 0.5rem;              
+                        border-radius: 6px;  
+                    }
+                }
+                .form-input {
+                    padding: 1.5rem 2.5rem;
+                    width: 68%;
+                    .u-light();
+                    font-size: 1.6rem;
+                    border: none;
+                    border-radius: 6px;
+                    color: #cecfd2;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                .btn-header-css {
+                    margin-left: 6%;
+                    padding: 1.4rem 2rem;
+                    
+                    .u-medium();
+                    font-size: 1.6rem;
+                    color: #ffffff;
+                    text-transform: uppercase;
+                    background-color: @btn-color;
+                    border-radius: 6px;
+                    vertical-align: top;
+                }
+            }
+            @media @mobile {
+                padding-bottom: 22%;
+            }
+        }
+    }
+    .img-hand-css {
+        img {
+            margin-top: 35%;
+            padding-right: 5%;
+        }
+        @media @mobile {
+            display: none;
+        }
+    }
+}
+
+.clients-css {
+    background-color: @bg-header-color;
+    .clients-row-css{
+        .evernote-block-css {
+            margin: 0 4% 0 4%;
+
+            .evernote-css {
+                margin: 36.88% 0 35.63% 0;
+                @media @mobile {
+                    margin: 4% auto;
+                    max-width: 30%;
+                }
+            }
+            @media @mobile {
+                margin-right: 2.5%;
+            }
+        }
+        .microsoft-block-css {
+            margin-right: 2%;
+            .microsoft-css {
+                margin: 40% 0 37.5% 0;
+                @media @mobile {
+                    margin: 4% auto;
+                    max-width: 25%;
+                }
+            }
+            @media @mobile {
+                margin-right: 0;
+            }
+        }
+        .google-block-css {
+            margin-right: 2%;
+            .google-css {
+                margin: 38.8%  0 29.38% 0;
+                @media @mobile {
+                    margin: 4% auto;
+                    max-width: 25%;
+                }
+            }
+            @media @mobile {
+                margin-right: 0;
+            }
+        }
+        .sony-block-css {
+            margin-right: 2%;
+            .sony-css{
+                margin: 46% 0 37.5% 0;
+                @media @mobile {
+                    margin: 4% auto;
+                    max-width: 25%;
+                }
+            }
+            @media @mobile {
+                margin-right: 0;
+            }
+        }
+        .firefox-block-css {
+            .firefox-css{
+                margin: 40% 0 35.63% 0;
+                @media @mobile {
+                    margin: 4% auto;
+                    max-width: 25%;
+                }
+            }
+            @media @mobile {
+                margin-right: 0;
+            }
+        
+        }
+    }
+}
+.why-tank-css {
+    position: relative;
+    overflow-x: hidden;
+    .container-why-css {
+        margin-top: 9.23%;
+        margin-bottom: 7.69%;
+        .header-css {
+            margin-bottom: 10.53%;
+            .header-section-style();
+            color: @headers-section-color;
+        }
+        .content-css {
+            margin-top: 3.61%;
+            .paragraph-css {
+                .col-header-css {
+                    padding-left: 0;
+                    .paragraph-header-css{
+                        .paragraph-header(@headers-section-color);
+                    }
+                }
+                .paragraph-text-css {
+                    .paragraph-text();
+                    color: #9499a2;
+                }
+            }
+        }
+    }
+    .img-laptop {
+        position: absolute;
+        bottom: 9%;
+        left: 55%;
+        height: 65%;
+        @media @mobile {
+            display: none;
+        }
+        @media (min-width: 1200px) {
+            height:60%;
+        }
+    }
+
+}
+.why-different-css {
+    background:@bg-section-color url(../img/ships.png);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    @media (max-width: 1146px) {
+        background:@bg-section-color;
+    }
+    .header-css {
+        margin-top: 13.16%;
+        margin-bottom: 13.16%;
+        .header-section-style();
+        color: @headers-section-color;
+    }
+    .slider-css{
+        padding-bottom: 7.21%;
+        .paragraph-css {
+            .paragraph-header-css {
+                .paragraph-header(@headers-section-color);
+            }
+            .paragraph-text-css {
+                margin-top: 3.5rem;
+                .paragraph-text();
+                color: #5a626e;
+            }
+        }
+    }
+}
+
+/* Dots */
+
+.slick-dotted .slick-slider {
+    margin-bottom: 30px;
+    border: none;
+}
+
+.slick-dots {
+    text-align: center;
+    margin-top: 3rem;
+    display: flex; 
+    justify-content: center; 
+    li {
+        position: relative;
+        display: inline-block;
+        height: 3rem;
+        width: 3rem;
+        margin: 0 1rem;
+        padding: 0;
+        .u-medium();
+        cursor: pointer;
+        button {
+            border-radius: 50%; 
+            height: 3rem; 
+            width: 3rem; 
+            font-size: 1.5rem;
+            color: @nav-text-color;
+            border: none;
+            background: none;
+            &:hover, &:focus {
+                .action-dot();
+                opacity: 1;
+            }
+        }
+        &.slick-active button{
+            .action-dot();
+        }
+    }
+}
+.e-mail-section-css {
+    .header-css {
+        margin-top: 8.78%;
+        .header-section-style();
+        color: @headers-e-mail-color;
+    }
+    .subtitle-css {
+        margin-top: 2.64%;
+        .u-light-italic();
+        font-size: 2.4rem;
+        color: @headers-e-mail-color;
+        @media (max-width: 575px) {
+            font-size: 2rem;
+            padding: 0 2.5%;
+        }
+    }
+    .form-header-css {
+        margin-top: 4.93%;
+        margin-bottom: 9.86%;
+        .form-input {
+            padding: 0 9rem;
+            height: 7rem;
+            width: 65%;
+            font-size: 1.6rem;
+            border: 1px solid #d1d1d1;
+            border-radius: 3px;
+            color: #5a626e;
+            background-image: url(../img/e-mail.png);
+            background-position: 3rem center;
+            background-repeat: no-repeat;
+            &:focus {
+                outline: none;
+            }
+            @media (max-width: 476px) {
+                background-image: url(../img/e-mail.png);
+                background-size: 3rem;
+                background-position: 3rem center;
+                background-repeat: no-repeat;
+            }
+        }
+        .btn-header-css {
+            margin-left: 3%;
+            vertical-align: top;
+            padding: 2.2rem 5rem;
+            .u-medium();
+            font-size: 1.6rem;
+            color: #ffffff;
+            text-transform: uppercase;
+            background-color: @btn-color;
+            border-radius: 3px;
+        }
+    }
+}
+.footer-css {
+    background-color: @bg-footer-color;
+    border-top: 2px solid #e8e8ea;
+    .navbar-brand{
+        margin: 4.96% 0;
+        @media @mobile {
+            width: 100%;
+            margin: 0;
+        } 
+        img{
+            @media @mobile {
+                display: block;
+                margin: 2% auto;
+                height:3rem;
+            } 
+        }
+    }
+    .text-links-css {
+        li {   
+            .footer-link-margin();
+            margin-right: 3.9rem;
+            a {
+                .u-light();
+                color: @footer-text-color;
+                text-decoration: none;
+                font-size: 1.35rem;
+                text-transform: uppercase;    
+                &:hover {
+                    color: @footer-text-color-hover;
+                }
+            }
+            &:last-child {
+                margin-right: 3.5rem;
+                padding-right: 2.5rem;
+                border-right: 2px solid #d3d3d3;
+                @media @mobile {
+                    display: block;
+                    margin: 2% auto;
+                    padding:0;
+                    border: none;
+                } 
+            }
+            @media @mobile {
+                display: block;
+                margin: 2% auto;
+            } 
+        }
+        @media @mobile {
+            width: 100%;
+        } 
+    }
+
+    .icon-links-css {
+        list-style-type: none;
+        padding-left: 0;
+        margin: 0;
+        li {
+            display: inline;
+            .footer-link-margin();
+            margin-right: 3rem;
+            @media @mobile {
+                margin-right: 2rem;
+            }
+            img{
+            @media (max-width: 476px) {
+                height: 2.5rem; 
+            }
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        @media @mobile {
+            display: block;
+            margin: 2% auto;           
+        } 
+    }
+}
