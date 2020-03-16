@@ -92,13 +92,16 @@
     font-size: 4rem;
     text-transform: uppercase;
     @media (max-width: 575px) {
-        font-size: 3rem;
+        font-size: 4.5rem;
     }
 }
 .paragraph-header(@headers-section-color) {
     .u-medium();
     font-size: 2.2rem;
     color: @headers-section-color;
+    @media @mobile {
+        font-size: 3rem;
+    }
 }
 .paragraph-text() {
     margin: 1.5rem 0 3rem 2.2rem;
@@ -106,6 +109,10 @@
     .o-regular();
     font-size: 1.4rem;
     text-align: left;
+    @media @mobile {
+        text-align: justify;
+        font-size: 2.5rem;
+    }
 }
 .action-dot() {
     .u-bold();
@@ -167,13 +174,15 @@ html {
             border: none;
             outline: none;
             .menu-toggler-css {
+                vertical-align: top;
                 .u-medium();
                 color: @headers-section-color;
-                font-size: 2rem;
+                font-size: 4rem;
+                padding-left: 1rem;
             }
             &-icon {
-                background-size: 120%;
-                background-position: bottom;
+                height: 4.5rem;
+                width: 4.5rem;                    
             }
             @media @mobile {
                 display:block;
@@ -192,6 +201,9 @@ html {
                     text-transform: uppercase;    
                     &:hover {
                         color: @nav-text-color-hover;
+                    }
+                    @media @mobile {
+                        font-size: 3rem;
                     }
                 }
                 &:last-child {
@@ -227,11 +239,20 @@ html {
                     display: block;
                     margin-top: 0.16%;
                 }
+                @media @mobile {
+                    text-align: center;
+                    font-size: 6rem;
+                }
             }
             .subtitle-css {
                 .u-light-italic();
                 font-size: 2.4rem;
                 margin-top: 5.5%;
+                @media @mobile {
+                    text-align: center;
+                    font-size: 3.5rem;
+                    padding: 0 3rem;
+                }
             }
 
             .form-header-css {
@@ -240,11 +261,18 @@ html {
                     display: block;
                     margin: 9.50% 0 4.75% 0;
                     font-size: 1.6rem;
+                    @media @mobile {
+                        font-size: 2.5rem;
+                    }
                     span{
                         text-transform: uppercase;
                         background: #ffce54;
                         padding: 0.5rem;              
                         border-radius: 6px;  
+                        @media @mobile {
+                            padding: 1rem;
+                            border-radius: 0.5rem; 
+                        }
                     }
                 }
                 .form-input {
@@ -258,6 +286,12 @@ html {
                     &:focus {
                         outline: none;
                     }
+                    @media @mobile {
+                        width: 97%;
+                        padding: 2rem 3rem;
+                        border-radius: 0.5rem;
+                        font-size: 3rem;
+                    }
                 }
                 .btn-header-css {
                     margin-left: 6%;
@@ -270,6 +304,11 @@ html {
                     background-color: @btn-color;
                     border-radius: 6px;
                     vertical-align: top;
+                    @media @mobile {
+                        display: block;
+                        margin: 4% auto;
+                        font-size: 4rem;
+                    }
                 }
             }
             @media @mobile {
@@ -298,7 +337,7 @@ html {
                 margin: 36.88% 0 35.63% 0;
                 @media @mobile {
                     margin: 4% auto;
-                    max-width: 30%;
+                    max-width: 40%;
                 }
             }
             @media @mobile {
@@ -311,7 +350,7 @@ html {
                 margin: 40% 0 37.5% 0;
                 @media @mobile {
                     margin: 4% auto;
-                    max-width: 25%;
+                    max-width: 35%;
                 }
             }
             @media @mobile {
@@ -324,7 +363,7 @@ html {
                 margin: 38.8%  0 29.38% 0;
                 @media @mobile {
                     margin: 4% auto;
-                    max-width: 25%;
+                    max-width: 35%;
                 }
             }
             @media @mobile {
@@ -337,7 +376,7 @@ html {
                 margin: 46% 0 37.5% 0;
                 @media @mobile {
                     margin: 4% auto;
-                    max-width: 25%;
+                    max-width: 35%;
                 }
             }
             @media @mobile {
@@ -349,7 +388,7 @@ html {
                 margin: 40% 0 35.63% 0;
                 @media @mobile {
                     margin: 4% auto;
-                    max-width: 25%;
+                    max-width: 35%;
                 }
             }
             @media @mobile {
@@ -438,6 +477,7 @@ html {
 .slick-dots {
     text-align: center;
     margin-top: 3rem;
+    padding: 0;
     display: flex; 
     justify-content: center; 
     li {
@@ -445,7 +485,7 @@ html {
         display: inline-block;
         height: 3rem;
         width: 3rem;
-        margin: 0 1rem;
+        margin: 0 2rem;
         padding: 0;
         .u-medium();
         cursor: pointer;
@@ -460,6 +500,11 @@ html {
             &:hover, &:focus {
                 .action-dot();
                 opacity: 1;
+            }
+            @media @mobile {
+                height: 5rem;
+                width: 5rem;
+                font-size: 3rem;
             }
         }
         &.slick-active button{
@@ -478,9 +523,10 @@ html {
         .u-light-italic();
         font-size: 2.4rem;
         color: @headers-e-mail-color;
-        @media (max-width: 575px) {
-            font-size: 2rem;
+        @media @mobile {
+            font-size: 3rem;
             padding: 0 2.5%;
+            line-height: 4.5rem;
         }
     }
     .form-header-css {
@@ -500,6 +546,11 @@ html {
             &:focus {
                 outline: none;
             }
+            @media @mobile {
+                font-size: 3rem;
+                width: 99.5%;
+                height: 9rem;
+            }
             @media (max-width: 476px) {
                 background-image: url(../img/e-mail.png);
                 background-size: 3rem;
@@ -517,6 +568,12 @@ html {
             text-transform: uppercase;
             background-color: @btn-color;
             border-radius: 3px;
+            @media @mobile {
+                display: block;
+                margin: 3% auto;
+                padding: 2rem 3rem;
+                font-size: 3rem;
+            }
         }
     }
 }
@@ -550,6 +607,9 @@ html {
                 &:hover {
                     color: @footer-text-color-hover;
                 }
+                @media @mobile {
+                    font-size: 3rem;
+                } 
             }
             &:last-child {
                 margin-right: 3.5rem;
@@ -584,8 +644,8 @@ html {
                 margin-right: 2rem;
             }
             img{
-            @media (max-width: 476px) {
-                height: 2.5rem; 
+            @media @mobile {
+                height: 3.5rem; 
             }
             }
             &:last-child {
