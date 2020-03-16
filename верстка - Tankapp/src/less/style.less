@@ -124,6 +124,10 @@
 .footer-link-margin() {
     margin: 0.47% 0;
 }
+
+.button-hover(@btn-color) {
+    background: darken(@btn-color, 7%);
+}
 /*Colors*/
 @btn-color: #77c344;
 @text-color: #91959c;
@@ -304,6 +308,9 @@ html {
                     background-color: @btn-color;
                     border-radius: 6px;
                     vertical-align: top;
+                    &:hover {
+                        .button-hover(@btn-color)
+                    }
                     @media @mobile {
                         display: block;
                         margin: 4% auto;
@@ -568,6 +575,9 @@ html {
             text-transform: uppercase;
             background-color: @btn-color;
             border-radius: 3px;
+            &:hover {
+                .button-hover(@btn-color)
+            }
             @media @mobile {
                 display: block;
                 margin: 3% auto;
